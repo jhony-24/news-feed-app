@@ -68,14 +68,14 @@
                         android:src="@drawable/icon_send_neutral"/>
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/listContainerNewFeeds"
+            <ListView
+                android:id="@+id/listViewNewsFeed"
                 android:paddingStart="10sp"
                 android:paddingEnd="10sp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            </LinearLayout>
+            </ListView>
         </LinearLayout>
     </ScrollView>
     <LinearLayout
