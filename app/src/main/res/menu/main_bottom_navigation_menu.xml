@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Inicio"
+        android:icon="@drawable/icon_home_neutral"
+        android:id="@+id/page_feeds"/>
+    <item android:title="Perfil"
+        android:icon="@drawable/icon_profile_neutral"
+        android:id="@+id/page_profile"/>
+    <item
+        android:title="Datos"
+        android:icon="@drawable/icon_settings_neutral"
+        android:id="@+id/page_settings"/>
+</menu>

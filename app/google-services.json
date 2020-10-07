@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "366986729500",
+    "firebase_url": "https://final-senati.firebaseio.com",
+    "project_id": "final-senati",
+    "storage_bucket": "final-senati.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366986729500:android:de4e0b87772aea387f27d9",
+        "android_client_info": {
+          "package_name": "com.example.finalprojectapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366986729500-qo8nilqasjese07g9askqita4v3scmuq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finalprojectapp",
+            "certificate_hash": "39e1376543a4b01e56dfdee5a8a34679f57fb588"
+          }
+        },
+        {
+          "client_id": "366986729500-b15au0bdkq65obassjgujd7davakfnia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNdRXzdOoR3xiJFciJpOGOEhASiCaYyw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366986729500-b15au0bdkq65obassjgujd7davakfnia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
