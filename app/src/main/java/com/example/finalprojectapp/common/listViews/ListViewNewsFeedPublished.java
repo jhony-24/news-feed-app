@@ -41,8 +41,7 @@ public class ListViewNewsFeedPublished extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         NewPost newPost = (NewPost)getItem(i);
 
-        @SuppressLint("ViewHolder")
-        View newView = LayoutInflater.from(this.context).inflate(R.layout.widget_new_feed_published,viewGroup);
+        view = LayoutInflater.from(this.context).inflate(R.layout.widget_new_feed_published,null);
         TextView fullName = (TextView)view.findViewById(R.id.cardNewsFeedTextFullName);
         CircleImageView avatar = (CircleImageView)view.findViewById(R.id.cardNewsFeedAvatar);
         TextView datetime = (TextView)view.findViewById(R.id.cardNewsFeedTextDateTime);
@@ -53,6 +52,6 @@ public class ListViewNewsFeedPublished extends BaseAdapter {
         datetime.setText(newPost.getDatetime());
         message.setText(newPost.getMessage());
 
-        return newView;
+        return view;
     }
 }

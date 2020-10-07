@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class FeedsActivity extends AppCompatActivity {
     private EditText editTextNewMessagePost;
     private ListView listViewNewsFeed;
-    private ListViewNewsFeedPublished listViewNewsFeedPublished;
+    private ListViewNewsFeedPublished listViewNewsFeedPublishedAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class FeedsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_feeds);
         this.editTextNewMessagePost = (EditText)findViewById(R.id.editTextNewMessagePost);
         this.listViewNewsFeed = (ListView)findViewById(R.id.listViewNewsFeed);
-        this.listViewNewsFeedPublished = new ListViewNewsFeedPublished(this,GetItems());
-
+        this.listViewNewsFeedPublishedAdapter = new ListViewNewsFeedPublished(this,GetItems());
+        this.listViewNewsFeed.setAdapter(this.listViewNewsFeedPublishedAdapter);
 
         BottomNavigateActionController bottomNavigate = new BottomNavigateActionController(
                 this,
