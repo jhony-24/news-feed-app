@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">FinalProjectApp</string>
+
+    <string name="common_text_cancel">Cancelar</string>
+
     <string name="login_text_email">Correo</string>
     <string name="login_text_password">Contraseña</string>
     <string name="login_text_sign_in">Iniciar sesión</string>
@@ -7,6 +10,11 @@
     <string name="login_landing_title">Bienvenido, Inicia sesión con tu cuenta</string>
     <string name="login_landing_message">Si aún no tienes una cuenta</string>
     <string name="login_text_forget_password">Olvidé mi contraseña ?</string>
+
+    <string name="sign_up_landing_title">Registrate para iniciar sesión</string>
+    <string name="sign_up_landing_message">Ya tengo una cuenta?</string>
+
+
     <string name="forget_text_title">Olvidé mi contraseña</string>
     <string name="forget_text_message">Ingresa tu dirección de correo electrónico y cambiaremos tu contraseña para que puedas ingresar</string>
     <string name="forget_text_email">Ingresa tu correo electrónico</string>

@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements LoginAdapter.Vie
     }
 
     public void onNavigateToSignUp(View view) {
-        new NavigateScreen().navigate(this,FeedsActivity.class).fadeFromLeft();
+        new NavigateScreen().navigate(this,SignUpActivity.class).opacityAnimation();
     }
 
     public void onNavigateToForgetPassword(View view) {

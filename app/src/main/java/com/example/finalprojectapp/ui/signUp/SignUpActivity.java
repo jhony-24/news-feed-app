@@ -7,6 +7,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.ui.login.LoginActivity;
+import com.example.finalprojectapp.utils.navigateActions.NavigateScreen;
+import com.google.android.material.button.MaterialButton;
 
 public class SignUpActivity extends AppCompatActivity implements SignUpAdapter.View, View.OnClickListener{
     private ProgressBar signUpProgressBarCreate;
@@ -17,14 +20,14 @@ public class SignUpActivity extends AppCompatActivity implements SignUpAdapter.V
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        Button signUpButtonCancel = (Button) findViewById(R.id.signUpButtonCancel);
-        Button signUpButtonCreate = (Button) findViewById(R.id.signUpButtonCreate);
+        MaterialButton signUpButtonCreate = (MaterialButton) findViewById(R.id.signUpButtonCreate);
+        MaterialButton signUpButtonCancel = (MaterialButton) findViewById(R.id.signUpButtonCancel);
 
-        this.signUpProgressBarCreate = (ProgressBar)findViewById(R.id.signUpProgressBarCreate);
+        this.signUpProgressBarCreate = (ProgressBar)findViewById(R.id.signInProgressBarCreate);
         this.signUpPresenter = new SignUpPresenter(this);
 
-        signUpButtonCancel.setOnClickListener(this);
         signUpButtonCreate.setOnClickListener(this);
+        signUpButtonCancel.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +55,10 @@ public class SignUpActivity extends AppCompatActivity implements SignUpAdapter.V
 
     @Override
     public void cancelSignUp() {
-        onBackPressed();
+        new NavigateScreen().navigate(this, LoginActivity.class);
+    }
+
+    public void onNavigateToSignIn(View view) {
+        new NavigateScreen().navigate(this, LoginActivity.class);
     }
 }
