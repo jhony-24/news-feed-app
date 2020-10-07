@@ -13,19 +13,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <TableLayout
+        android:collapseColumns="3"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:padding="15sp"
-            android:textSize="16sp"
-            android:text="Feeds"/>
-    </LinearLayout>
+        <TableRow>
+            <ImageButton
+                android:layout_gravity="center"
+                android:layout_width="45sp"
+                android:layout_height="45sp"
+                android:background="@color/colorNeutralScreen"
+                android:src="@drawable/ic_baseline_add_comment_24"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:padding="15sp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="Feeds"/>
+            <LinearLayout
+                android:layout_width="45sp"
+                android:layout_height="45sp"/>
+        </TableRow>
+    </TableLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0sp"
@@ -51,7 +66,7 @@
                     android:layout_weight="1"
                     android:maxLines="1"
                     android:layout_height="wrap_content"
-                    android:hint="Escribir nuevo post..."
+                    android:hint="Buscar una publicación..."
                     android:textSize="15sp"
                     android:layout_marginRight="10sp"
                     android:elevation="0sp"/>
@@ -65,7 +80,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/icon_send_neutral"/>
+                        android:src="@drawable/ic_baseline_search_24"/>
                 </LinearLayout>
             </LinearLayout>
             <ListView

@@ -14,9 +14,12 @@ import com.example.finalprojectapp.ui.profile.ProfileActivity;
 import com.example.finalprojectapp.ui.signUp.SignUpActivity;
 import com.example.finalprojectapp.utils.navigateActions.NavigateScreen;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textview.MaterialTextView;
 
 public class LoginActivity extends AppCompatActivity implements LoginAdapter.View{
     TextInputEditText loginEditTextEmail,loginEditTextPassword;
+    MaterialTextView loginProgressTextSignIn;
+
     ProgressBar loginProgressBarSignIn;
     LoginAdapter.Presenter presenterLogin;
 
@@ -27,6 +30,7 @@ public class LoginActivity extends AppCompatActivity implements LoginAdapter.Vie
         this.loginEditTextEmail = (TextInputEditText) findViewById(R.id.loginEditTextEmail);
         this.loginEditTextPassword = (TextInputEditText) findViewById(R.id.loginEditTextPassword);
         this.loginProgressBarSignIn = (ProgressBar)findViewById(R.id.loginProgressBarSignIn);
+        this.loginProgressTextSignIn = (MaterialTextView)findViewById(R.id.loginProgressTextSignIn);
         this.presenterLogin = new LoginPresenter(this);
     }
 
@@ -49,11 +53,13 @@ public class LoginActivity extends AppCompatActivity implements LoginAdapter.Vie
 
     @Override
     public void loading() {
+        this.loginProgressTextSignIn.setText(R.string.common_text_loading_verify);
         this.loginProgressBarSignIn.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void success() {
+        this.loginProgressTextSignIn.setText(R.string.login_text_sign_in);
         this.loginProgressBarSignIn.setVisibility(View.GONE);
     }
 

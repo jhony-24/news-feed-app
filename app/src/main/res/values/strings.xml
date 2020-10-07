@@ -2,6 +2,7 @@
     <string name="app_name">FinalProjectApp</string>
 
     <string name="common_text_cancel">Cancelar</string>
+    <string name="common_text_loading_verify">Verificando...</string>
 
     <string name="login_text_email">Correo</string>
     <string name="login_text_password">Contraseña</string>
@@ -13,6 +14,11 @@
 
     <string name="sign_up_landing_title">Registrate para iniciar sesión</string>
     <string name="sign_up_landing_message">Ya tengo una cuenta?</string>
+
+    <string name="sign_up_text_full_name">Nombre completo</string>
+    <string name="sign_up_text_email">Tu correo electronico</string>
+    <string name="sign_up_text_password">Tu contraseña</string>
+    <string name="sign_up_text_password_confirm">Confirmar tu contraseña</string>
 
 
     <string name="forget_text_title">Olvidé mi contraseña</string>
