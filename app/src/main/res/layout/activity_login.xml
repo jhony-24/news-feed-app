@@ -23,10 +23,10 @@
             android:layout_marginBottom="70sp">
             <ImageView
                 android:layout_marginTop="40sp"
-                android:layout_marginBottom="60sp"
-                android:layout_width="70sp"
-                android:layout_height="70sp"
-                android:src="@drawable/icon_comment_primary"
+                android:layout_marginBottom="20sp"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:src="@drawable/icon_primary_check_0"
                 android:contentDescription="@string/login_text_sign_in" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -35,8 +35,8 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="30sp"
-                android:paddingStart="10sp"
-                android:paddingEnd="10sp"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
                 android:paddingBottom="20sp"
                 />
             <LinearLayout
@@ -62,8 +62,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="20sp"
-            android:paddingEnd="20sp">
+            android:paddingStart="30sp"
+            android:paddingEnd="30sp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginBottom="25dp"
@@ -101,8 +101,8 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
         <LinearLayout
-            android:paddingStart="20sp"
-            android:paddingEnd="20sp"
+            android:paddingStart="30sp"
+            android:paddingEnd="30sp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
@@ -115,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="4sp"
-                android:background="@drawable/gradient_primary_rounded">
+                android:background="@drawable/primary_rounded">
                 <ProgressBar
                     android:visibility="gone"
                     android:indeterminateTint="#ffffff"
@@ -124,7 +124,7 @@
                     android:layout_marginEnd="10sp"
                     android:layout_height="wrap_content"/>
                 <com.google.android.material.textview.MaterialTextView
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:paddingTop="15sp"
                     android:paddingBottom="15sp"
                     android:id="@+id/loginProgressTextSignIn"
