@@ -67,7 +67,24 @@
                 android:layout_marginBottom="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/login_text_email"
+                android:hint="@string/sign_up_text_full_name"
+                app:boxCornerRadiusBottomStart="10sp"
+                app:boxCornerRadiusBottomEnd="10sp"
+                app:boxCornerRadiusTopStart="10sp"
+                app:boxCornerRadiusTopEnd="10sp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEditTextFullName"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sign_up_text_email"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
                 app:boxCornerRadiusTopStart="10sp"
@@ -83,7 +100,7 @@
                 android:layout_marginBottom="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/login_text_password"
+                android:hint="@string/sign_up_text_password"
                 app:endIconMode="password_toggle"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
@@ -92,6 +109,24 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEditTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sign_up_text_password_confirm"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusBottomStart="10sp"
+                app:boxCornerRadiusBottomEnd="10sp"
+                app:boxCornerRadiusTopStart="10sp"
+                app:boxCornerRadiusTopEnd="10sp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEditTextPasswordConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"

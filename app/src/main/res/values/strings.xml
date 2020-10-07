@@ -14,6 +14,11 @@
     <string name="sign_up_landing_title">Registrate para iniciar sesión</string>
     <string name="sign_up_landing_message">Ya tengo una cuenta?</string>
 
+    <string name="sign_up_text_full_name">Nombre completo</string>
+    <string name="sign_up_text_email">Tu correo electronico</string>
+    <string name="sign_up_text_password">Tu contraseña</string>
+    <string name="sign_up_text_password_confirm">Confirmar tu contraseña</string>
+
 
     <string name="forget_text_title">Olvidé mi contraseña</string>
     <string name="forget_text_message">Ingresa tu dirección de correo electrónico y cambiaremos tu contraseña para que puedas ingresar</string>
