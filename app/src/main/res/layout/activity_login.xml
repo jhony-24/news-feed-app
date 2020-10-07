@@ -107,21 +107,33 @@
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:layout_height="wrap_content">
-            <ProgressBar
-                android:visibility="gone"
-                android:id="@+id/loginProgressBarSignIn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <com.google.android.material.button.MaterialButton
+
+            <LinearLayout
                 android:onClick="onSignIn"
-                app:cornerRadius="30sp"
-                android:id="@+id/loginButtonSignIn"
+                android:focusable="true"
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:padding="15sp"
-                android:text="@string/login_text_sign_in"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                />
+                android:padding="4sp"
+                android:background="@drawable/gradient_primary_rounded">
+                <ProgressBar
+                    android:visibility="gone"
+                    android:indeterminateTint="#ffffff"
+                    android:id="@+id/loginProgressBarSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="15sp"
+                    android:paddingTop="15sp"
+                    android:paddingBottom="15sp"
+                    android:id="@+id/loginProgressTextSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorLight"
+                    android:text="@string/login_text_sign_in"/>
+            </LinearLayout>
+
             <com.google.android.material.textview.MaterialTextView
                 android:layout_marginTop="30sp"
                 android:layout_marginBottom="30sp"

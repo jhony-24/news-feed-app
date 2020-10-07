@@ -2,6 +2,7 @@
     <string name="app_name">FinalProjectApp</string>
 
     <string name="common_text_cancel">Cancelar</string>
+    <string name="common_text_loading_verify">Verificando...</string>
 
     <string name="login_text_email">Correo</string>
     <string name="login_text_password">Contraseña</string>
