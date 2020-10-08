@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.finalprojectapp.R;
-import com.example.finalprojectapp.ui.feeds.FeedsActivity;
+import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.profile.ProfileActivity;
 import com.example.finalprojectapp.utils.navigateActions.BottomNavigateActionController;
 
@@ -23,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         bottomNavigate.setOnClickItems((MenuItem menuItem)->{
             switch (menuItem.getItemId()) {
                 case R.id.page_feeds:
-                    bottomNavigate.setActivity(FeedsActivity.class);
+                    bottomNavigate.setActivity(NewsActivity.class);
                     return true;
                 case R.id.page_profile:
                     bottomNavigate.setActivity(ProfileActivity.class);

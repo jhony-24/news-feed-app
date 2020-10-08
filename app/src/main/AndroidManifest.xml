@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.settings.SettingsActivity"></activity>
-        <activity android:name=".ui.feeds.FeedsActivity" />
+        <activity android:name=".ui.news.NewsActivity" />
         <activity
             android:name=".ui.forget.ForgetPasswordActivity"
             android:screenOrientation="portrait"

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingStart="20sp"
+    android:paddingEnd="20sp"
+    android:paddingTop="10sp"
+    android:paddingBottom="10sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:background="@drawable/gradient_primary_rounded_full"
+        android:layout_marginBottom="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4sp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cardUserProfileAvatar"
+            app:civ_border_width="2sp"
+            app:civ_border_color="@color/colorNeutralScreen"
+            android:layout_width="40sp"
+            android:layout_height="40sp"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/cardUserProfileUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorDark"
+        android:text="Username one s"
+        android:textAlignment="center"/>
+</LinearLayout>

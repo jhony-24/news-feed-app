@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feeds.FeedsActivity"
+    tools:context=".ui.news.NewsActivity"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:background="@color/colorNeutralScreen">
@@ -25,7 +25,7 @@
                 android:layout_height="45sp"
                 android:background="@color/colorNeutralScreen"
                 android:src="@drawable/ic_baseline_add_comment_24"
-                />
+                android:contentDescription="new post" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="0sp"
                 android:layout_weight="1"
@@ -36,9 +36,14 @@
                 android:layout_gravity="center"
                 android:textSize="16sp"
                 android:text="Feeds"/>
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/newsImageButtonSearch"
+                android:layout_gravity="center"
                 android:layout_width="45sp"
-                android:layout_height="45sp"/>
+                android:layout_height="45sp"
+                android:background="@color/colorNeutralScreen"
+                android:src="@drawable/ic_baseline_search_darker_24"
+                android:contentDescription="search" />
         </TableRow>
     </TableLayout>
     <LinearLayout
@@ -47,7 +52,24 @@
             android:layout_height="0sp"
             android:layout_weight="1"
             >
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/widget_user_card_profile"/>
+                    <include layout="@layout/widget_user_card_profile"/>
+                    <include layout="@layout/widget_user_card_profile"/>
+                    <include layout="@layout/widget_user_card_profile"/>
+                    <include layout="@layout/widget_user_card_profile"/>
+                </LinearLayout>
+            </HorizontalScrollView>
             <LinearLayout
+                android:id="@+id/newsLinearLayoutContainerSearchNews"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,27 +80,26 @@
                 android:background="@drawable/card_rounded_solid">
                 <EditText
                     android:id="@+id/editTextNewMessagePost"
-                    android:padding="10sp"
                     android:background="@drawable/card_rounded_solid"
                     android:layout_width="0sp"
                     android:layout_weight="1"
-                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="15sp"
                     android:layout_height="wrap_content"
                     android:hint="Buscar una publicación..."
                     android:textSize="15sp"
                     android:layout_marginRight="10sp"
                     android:elevation="0sp"/>
                 <LinearLayout
-                    android:background="@drawable/card_rounded_solid_circle"
-                    android:layout_width="40sp"
-                    android:layout_height="40sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:padding="10sp"
-                    android:clickable="true"
-                    android:onClick="onPublishNewPost">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_baseline_search_24"/>
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/newsTextViewCancelSearchNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"/>
                 </LinearLayout>
             </LinearLayout>
             <ListView

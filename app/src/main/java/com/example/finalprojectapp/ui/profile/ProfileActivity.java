@@ -3,10 +3,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.example.finalprojectapp.R;
-import com.example.finalprojectapp.ui.feeds.FeedsActivity;
+import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.settings.SettingsActivity;
 import com.example.finalprojectapp.utils.navigateActions.BottomNavigateActionController;
 import com.squareup.picasso.Picasso;
@@ -32,7 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
         bottomNavigate.setOnClickItems((MenuItem menuItem)->{
             switch (menuItem.getItemId()) {
                 case R.id.page_feeds:
-                    bottomNavigate.setActivity(FeedsActivity.class);
+                    bottomNavigate.setActivity(NewsActivity.class);
                     return true;
                 case R.id.page_profile:
                     return true;

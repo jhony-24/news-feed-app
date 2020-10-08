@@ -26,15 +26,9 @@
                 android:src="@drawable/icon_primary_check_1"
                 android:contentDescription="@string/sign_up_landing_title" />
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/CustomTextViewBigTitle"
+                android:textStyle="bold"
                 android:text="@string/sign_up_landing_title"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="30sp"
-                android:paddingStart="15sp"
-                android:paddingEnd="15sp"
-                android:paddingBottom="20sp"
                 />
             <LinearLayout
                 android:orientation="horizontal"
@@ -64,15 +58,12 @@
             android:paddingEnd="30sp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginBottom="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="@string/sign_up_text_full_name"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
                 app:boxCornerRadiusTopStart="10sp"
                 app:boxCornerRadiusTopEnd="10sp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEditTextFullName"
                     android:inputType="textEmailAddress"
@@ -81,15 +72,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginBottom="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="@string/sign_up_text_email"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
                 app:boxCornerRadiusTopStart="10sp"
                 app:boxCornerRadiusTopEnd="10sp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEditTextEmail"
                     android:inputType="textEmailAddress"
@@ -97,16 +85,13 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginBottom="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="@string/sign_up_text_password"
                 app:endIconMode="password_toggle"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
                 app:boxCornerRadiusTopStart="10sp"
                 app:boxCornerRadiusTopEnd="10sp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEditTextPassword"
                     android:layout_width="match_parent"
@@ -115,16 +100,13 @@
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginBottom="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="@string/sign_up_text_password_confirm"
                 app:endIconMode="password_toggle"
                 app:boxCornerRadiusBottomStart="10sp"
                 app:boxCornerRadiusBottomEnd="10sp"
                 app:boxCornerRadiusTopStart="10sp"
                 app:boxCornerRadiusTopEnd="10sp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEditTextPasswordConfirm"
                     android:layout_width="match_parent"

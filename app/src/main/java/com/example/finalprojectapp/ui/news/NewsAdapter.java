@@ -1,6 +1,6 @@
-package com.example.finalprojectapp.ui.feeds;
+package com.example.finalprojectapp.ui.news;
 
-public interface FeedsAdapter {
+public interface NewsAdapter {
     interface View{
 
     }

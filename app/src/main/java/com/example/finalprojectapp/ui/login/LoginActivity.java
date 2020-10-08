@@ -1,16 +1,13 @@
 package com.example.finalprojectapp.ui.login;
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.example.finalprojectapp.R;
-import com.example.finalprojectapp.ui.feeds.FeedsActivity;
+import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.forget.ForgetPasswordActivity;
-import com.example.finalprojectapp.ui.privacy.PrivacyActivity;
-import com.example.finalprojectapp.ui.profile.ProfileActivity;
 import com.example.finalprojectapp.ui.signUp.SignUpActivity;
 import com.example.finalprojectapp.utils.navigateActions.NavigateScreen;
 import com.google.android.material.textfield.TextInputEditText;
@@ -65,7 +62,7 @@ public class LoginActivity extends AppCompatActivity implements LoginAdapter.Vie
 
     @Override
     public void navigateToMainApplication() {
-        new NavigateScreen().navigate(this, FeedsActivity.class).fadeFromLeft();
+        new NavigateScreen().navigate(this, NewsActivity.class).fadeFromLeft();
         finish();
     }
 }
