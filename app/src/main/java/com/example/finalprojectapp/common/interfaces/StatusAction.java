@@ -6,4 +6,9 @@ public interface StatusAction {
         void loading();
         void success();
     }
+
+    interface ActionSuccessAndFailed {
+        void success();
+        void failed();
+    }
 }

@@ -1,15 +1,14 @@
 package com.example.finalprojectapp.ui.news;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.common.listViews.ListViewNewsFeedPublished;
 import com.example.finalprojectapp.data.entities.NewPost;
@@ -20,10 +19,9 @@ import com.example.finalprojectapp.common.helpers.BottomNavigateActionController
 
 import java.util.ArrayList;
 
-public class NewsActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View{
     private EditText editTextNewMessagePost;
     private ListView listViewNewsFeed;
-    private ListViewNewsFeedPublished listViewNewsFeedPublishedAdapter;
     private ImageButton newsImageButtonSearch;
     private LinearLayout newsLinearLayoutContainerSearchNews;
     private TextView newsTextViewCancelSearchNews;
@@ -39,13 +37,7 @@ public class NewsActivity extends AppCompatActivity {
         this.newsLinearLayoutContainerSearchNews = (LinearLayout)findViewById(R.id.newsLinearLayoutContainerSearchNews);
         this.newsTextViewCancelSearchNews = (TextView)findViewById(R.id.newsTextViewCancelSearchNews);
 
-        this.listViewNewsFeedPublishedAdapter = new ListViewNewsFeedPublished(this,GetItems());
-        this.listViewNewsFeed.setAdapter(this.listViewNewsFeedPublishedAdapter);
-
-        BottomNavigateActionController bottomNavigate = new BottomNavigateActionController(
-                this,
-                R.id.bottomNavigation,
-                R.id.page_feeds);
+        BottomNavigateActionController bottomNavigate = new BottomNavigateActionController(this, R.id.bottomNavigation, R.id.page_feeds);
         bottomNavigate.setOnClickItems((MenuItem menuItem)->{
             switch (menuItem.getItemId()) {
                 case R.id.page_feeds:
@@ -74,7 +66,6 @@ public class NewsActivity extends AppCompatActivity {
         posts.add(new NewPost("https://cdn.pixabay.com/photo/2019/12/12/07/01/beomeosa-temple-4689959_960_720.jpg","Juan mark","today","Hola"));
         return posts;
     }
-
     public void controlAppearanceContainerSearchNewsFeed() {
         this.newsImageButtonSearch.setOnClickListener((view)-> {
                 this.newsLinearLayoutContainerSearchNews.setVisibility(View.VISIBLE);
@@ -84,5 +75,19 @@ public class NewsActivity extends AppCompatActivity {
             this.editTextNewMessagePost.setText("");
             this.newsLinearLayoutContainerSearchNews.setVisibility(View.GONE);
         });
+    }
+
+    @Override
+    public void loading() {
+    }
+
+    @Override
+    public void success() {
+    }
+
+    @Override
+    public void onLoadNewsFeed(ArrayList<NewPost> listNewPost) {
+        ListViewNewsFeedPublished listViewNewsFeedPublishedAdapter = new ListViewNewsFeedPublished(this, listNewPost);
+        this.listViewNewsFeed.setAdapter(listViewNewsFeedPublishedAdapter);
     }
 }

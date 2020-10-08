@@ -6,6 +6,10 @@ public class NewPost {
     private String datetime;
     private String message;
 
+    public NewPost(){
+
+    }
+
     public NewPost(String avatar, String fullName, String datetime, String message) {
         this.avatar = avatar;
         this.fullName = fullName;
