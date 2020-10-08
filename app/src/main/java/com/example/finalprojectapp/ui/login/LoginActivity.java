@@ -9,7 +9,7 @@ import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.forget.ForgetPasswordActivity;
 import com.example.finalprojectapp.ui.signUp.SignUpActivity;
-import com.example.finalprojectapp.utils.navigateActions.NavigateScreen;
+import com.example.finalprojectapp.common.helpers.NavigateScreen;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 

@@ -1,4 +1,4 @@
-package com.example.finalprojectapp.utils.helpers;
+package com.example.finalprojectapp.common.helpers;
 
 import android.content.Context;
 import android.view.animation.Animation;

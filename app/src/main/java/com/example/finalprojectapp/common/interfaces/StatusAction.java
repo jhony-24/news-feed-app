@@ -1,4 +1,4 @@
-package com.example.finalprojectapp.utils.commonInterfaces;
+package com.example.finalprojectapp.common.interfaces;
 
 public interface StatusAction {
 

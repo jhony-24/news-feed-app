@@ -1,4 +1,4 @@
-package com.example.finalprojectapp.utils.navigateActions;
+package com.example.finalprojectapp.common.helpers;
 import android.app.Activity;
 import android.content.Intent;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

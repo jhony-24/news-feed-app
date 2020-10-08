@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.profile.ProfileActivity;
-import com.example.finalprojectapp.utils.navigateActions.BottomNavigateActionController;
+import com.example.finalprojectapp.common.helpers.BottomNavigateActionController;
 
 public class SettingsActivity extends AppCompatActivity {
 

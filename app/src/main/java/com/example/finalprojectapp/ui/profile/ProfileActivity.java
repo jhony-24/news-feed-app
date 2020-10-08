@@ -7,7 +7,7 @@ import android.view.View;
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.settings.SettingsActivity;
-import com.example.finalprojectapp.utils.navigateActions.BottomNavigateActionController;
+import com.example.finalprojectapp.common.helpers.BottomNavigateActionController;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;

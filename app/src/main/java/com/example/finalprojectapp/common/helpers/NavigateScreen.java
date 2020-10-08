@@ -1,12 +1,10 @@
-package com.example.finalprojectapp.utils.navigateActions;
-
+package com.example.finalprojectapp.common.helpers;
 import android.app.Activity;
 import android.content.Intent;
-
 import com.example.finalprojectapp.R;
 
 public class NavigateScreen {
-    private static Activity activity;
+    private Activity activity;
     public <T> NavigateScreen  navigate(Activity contextActivity,Class<T> classActivity){
         activity = contextActivity;
         Intent intent = new Intent(contextActivity,classActivity);

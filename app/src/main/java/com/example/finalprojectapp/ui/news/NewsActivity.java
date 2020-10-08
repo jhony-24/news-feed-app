@@ -15,8 +15,8 @@ import com.example.finalprojectapp.common.listViews.ListViewNewsFeedPublished;
 import com.example.finalprojectapp.data.entities.NewPost;
 import com.example.finalprojectapp.ui.profile.ProfileActivity;
 import com.example.finalprojectapp.ui.settings.SettingsActivity;
-import com.example.finalprojectapp.utils.helpers.ComposeAnimations;
-import com.example.finalprojectapp.utils.navigateActions.BottomNavigateActionController;
+import com.example.finalprojectapp.common.helpers.ComposeAnimations;
+import com.example.finalprojectapp.common.helpers.BottomNavigateActionController;
 
 import java.util.ArrayList;
 

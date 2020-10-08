@@ -2,13 +2,12 @@ package com.example.finalprojectapp.ui.signUp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.ui.login.LoginActivity;
-import com.example.finalprojectapp.utils.navigateActions.NavigateScreen;
+import com.example.finalprojectapp.common.helpers.NavigateScreen;
 import com.google.android.material.button.MaterialButton;
 
 public class SignUpActivity extends AppCompatActivity implements SignUpAdapter.View, View.OnClickListener{

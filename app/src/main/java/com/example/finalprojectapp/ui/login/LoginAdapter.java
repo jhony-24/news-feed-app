@@ -1,7 +1,7 @@
 package com.example.finalprojectapp.ui.login;
 
 import com.example.finalprojectapp.data.entities.User;
-import com.example.finalprojectapp.utils.commonInterfaces.StatusAction;
+import com.example.finalprojectapp.common.interfaces.StatusAction;
 
 public interface LoginAdapter {
     interface View extends StatusAction.ActionLoadingAndSuccess {
