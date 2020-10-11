@@ -20,10 +20,10 @@
   </path>
   <path
       android:pathData="M77.5,85.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0"
-      android:fillColor="#E12626"/>
+      android:fillColor="@color/colorPrimary"/>
   <path
       android:pathData="M134.5,52.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0"
-      android:fillColor="#E12626"/>
+      android:fillColor="@color/colorPrimary"/>
   <path
       android:pathData="M113.5,87.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0">
     <aapt:attr name="android:fillColor">
@@ -40,5 +40,5 @@
   </path>
   <path
       android:pathData="M131,99m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"
-      android:fillColor="#ffffff"/>
+      android:fillColor="@color/colorLight"/>
 </vector>

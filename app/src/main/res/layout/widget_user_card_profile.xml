@@ -13,11 +13,12 @@
         android:layout_marginBottom="5sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="4sp">
+        android:padding="2sp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/cardUserProfileAvatar"
-            app:civ_border_width="2sp"
+            app:civ_border_width="4sp"
             app:civ_border_color="@color/colorNeutralScreen"
+            android:src="@drawable/test_image_user_1"
             android:layout_width="40sp"
             android:layout_height="40sp"/>
     </FrameLayout>
@@ -27,6 +28,6 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textColor="@color/colorDark"
-        android:text="Username one s"
+        android:text="Username one"
         android:textAlignment="center"/>
 </LinearLayout>

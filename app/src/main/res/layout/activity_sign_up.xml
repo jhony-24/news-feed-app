@@ -21,9 +21,9 @@
             <ImageView
                 android:layout_marginTop="20sp"
                 android:layout_marginBottom="20sp"
-                android:layout_width="230sp"
-                android:layout_height="230sp"
-                android:src="@drawable/icon_primary_check_1"
+                android:layout_width="270sp"
+                android:layout_height="270sp"
+                android:src="@drawable/icon_undraw_startup_life"
                 android:contentDescription="@string/sign_up_landing_title" />
             <com.google.android.material.textview.MaterialTextView
                 style="@style/CustomTextViewBigTitle"

@@ -9,7 +9,7 @@ public class NavigateScreen {
         activity = contextActivity;
         Intent intent = new Intent(contextActivity,classActivity);
         activity.startActivity(intent);
-        return new NavigateScreen();
+        return this;
     }
 
     public void opacityAnimation() {

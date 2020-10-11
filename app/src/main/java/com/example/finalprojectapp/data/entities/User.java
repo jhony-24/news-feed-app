@@ -7,11 +7,9 @@ public class User {
     public String password;
     public String description;
     public String token;
+    public String avatar;
 
-    public User(){
-
-    }
-
+    public User(){ }
     public User(String fullName, String username, String email, String password, String description, String token) {
         this.fullName = fullName;
         this.username = username;
