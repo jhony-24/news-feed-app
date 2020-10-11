@@ -52,9 +52,10 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
         this.newsLinearLayoutContainerSearchNews = (LinearLayout)findViewById(R.id.newsLinearLayoutContainerSearchNews);
         this.newsTextViewCancelSearchNews = (TextView)findViewById(R.id.newsTextViewCancelSearchNews);
         this.newsProgressBarContainerAllData = (RelativeLayout) findViewById(R.id.newsProgressBarContainerAllData);
+        this.init();
+    }
 
-        new MaterialAlertDialogBuilder(this).show(); 
-
+    private void init() {
         BottomNavigateActionController bottomNavigate = new BottomNavigateActionController(this, R.id.bottomNavigation, R.id.page_feeds);
         bottomNavigate.setOnClickItems((MenuItem menuItem)->{
             switch (menuItem.getItemId()) {
@@ -71,7 +72,12 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
         });
         this.controlAppearanceContainerSearchNewsFeed();
         this.onLoadNewsFeed();
+
+        this.newsImageButtonAddNewPost.setOnClickListener(event -> {
+
+        });
     }
+
     public void controlAppearanceContainerSearchNewsFeed() {
         this.newsImageButtonSearch.setOnClickListener((view)-> {
                 this.newsLinearLayoutContainerSearchNews.setVisibility(View.VISIBLE);
