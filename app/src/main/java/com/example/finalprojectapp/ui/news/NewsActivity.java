@@ -91,10 +91,12 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
 
     @Override
     public void loading() {
+        this.newsProgressBarContainerAllData.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void success() {
+        NewsActivity.this.newsProgressBarContainerAllData.setVisibility(View.GONE);
     }
 
     @Override
@@ -103,7 +105,6 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
     }
 
     public void onLoadNewsFeed(){
-        this.newsProgressBarContainerAllData.setVisibility(View.VISIBLE);
 
         APIGetNewsFeedRepository.load(new APIGetNewsFeedRepository.LoadDataCallback() {
             @Override
