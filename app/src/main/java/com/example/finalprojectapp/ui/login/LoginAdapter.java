@@ -13,7 +13,7 @@ public interface LoginAdapter {
     }
     interface Presenter {
         void onSignIn(final String email,final String password);
-        void onSignComplete();
+        void onSignComplete(User user);
         void onSignFailed();
     }
 }

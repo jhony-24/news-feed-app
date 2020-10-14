@@ -17,7 +17,7 @@ public class SignInRepository implements ManagementAccessPort.SignIn {
                 FirebaseUser firebaseUser = task.getResult().getUser();
                 User userModel = new User();
                 userModel.setEmail(firebaseUser.getEmail());
-                userModel.setToken(firebaseUser.getUid());
+                userModel.setId(firebaseUser.getUid());
                 statusAccess.success(userModel);
             }
             else {

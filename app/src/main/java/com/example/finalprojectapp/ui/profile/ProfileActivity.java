@@ -3,8 +3,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.data.repositories.PersistUserAccountRepository;
 import com.example.finalprojectapp.ui.news.NewsActivity;
 import com.example.finalprojectapp.ui.settings.SettingsActivity;
 import com.example.finalprojectapp.common.helpers.BottomNavigateActionController;
@@ -13,7 +15,6 @@ import com.squareup.picasso.Picasso;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
-
     CircleImageView profileImageViewAvatar;
 
     @Override
@@ -41,6 +42,9 @@ public class ProfileActivity extends AppCompatActivity {
             }
             return false;
         });
+
+        PersistUserAccountRepository persistUserAccountRepository = new PersistUserAccountRepository(this);
+        Toast.makeText(this, persistUserAccountRepository.getPersistValue("id"), Toast.LENGTH_SHORT).show();
     }
 
     public void onGoBackFromProfile(View view){

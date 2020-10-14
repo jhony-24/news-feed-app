@@ -16,7 +16,6 @@ import com.google.android.material.textview.MaterialTextView;
 public class LoginActivity extends AppCompatActivity implements LoginAdapter.View{
     TextInputEditText loginEditTextEmail,loginEditTextPassword;
     MaterialTextView loginProgressTextSignIn;
-
     ProgressBar loginProgressBarSignIn;
     LoginAdapter.Presenter presenterLogin;
 
@@ -28,7 +27,7 @@ public class LoginActivity extends AppCompatActivity implements LoginAdapter.Vie
         this.loginEditTextPassword = (TextInputEditText) findViewById(R.id.loginEditTextPassword);
         this.loginProgressBarSignIn = (ProgressBar)findViewById(R.id.loginProgressBarSignIn);
         this.loginProgressTextSignIn = (MaterialTextView)findViewById(R.id.loginProgressTextSignIn);
-        this.presenterLogin = new LoginPresenter(this);
+        this.presenterLogin = new LoginPresenter(this,this);
     }
 
     public void onNavigateToSignUp(View view) {

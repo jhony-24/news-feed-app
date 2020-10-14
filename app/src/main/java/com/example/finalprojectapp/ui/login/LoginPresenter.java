@@ -1,12 +1,20 @@
 package com.example.finalprojectapp.ui.login;
+import android.app.Activity;
+import android.content.Context;
+
+import com.example.finalprojectapp.data.entities.PersistKeyValue;
 import com.example.finalprojectapp.data.entities.User;
+import com.example.finalprojectapp.data.repositories.PersistUserAccountRepository;
 import com.example.finalprojectapp.data.repositories.SignInRepository;
 
 public class LoginPresenter implements  LoginAdapter.Presenter {
     LoginAdapter.View loginView;
     LoginAdapter.Model loginModel;
-    public LoginPresenter(LoginAdapter.View loginView){
+    private Activity activity;
+
+    public LoginPresenter(LoginAdapter.View loginView, Activity activity){
         this.loginView = loginView;
+        this.activity = activity;
         this.loginModel = new LoginModel(this,new SignInRepository());
     }
 
@@ -25,7 +33,13 @@ public class LoginPresenter implements  LoginAdapter.Presenter {
     }
 
     @Override
-    public void onSignComplete() {
+    public void onSignComplete(User user) {
+        PersistKeyValue[] persistKeyValues = new PersistKeyValue[]{
+                new PersistKeyValue("id",user.getId()),
+                new PersistKeyValue("email",user.getEmail())
+        };
+        PersistUserAccountRepository repository = new PersistUserAccountRepository(this.activity);
+        repository.persist(persistKeyValues);
         this.loginView.success();
         this.loginView.navigateToMainApplication();
     }
