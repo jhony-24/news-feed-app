@@ -64,19 +64,21 @@
                     android:padding="4sp"
                     android:background="@drawable/gradient_primary_rounded_full">
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profileImageViewAvatar"
+                    android:id="@+id/profileAvatar"
                     android:layout_width="150sp"
                     android:layout_height="150sp"
                     app:civ_border_color="@color/colorLight"
                     app:civ_border_width="4sp"/>
                 </FrameLayout>
                 <TextView
+                    android:id="@+id/profileFullName"
                     android:text="User number one"
                     style="@style/CustomTextViewBigTitle"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:id="@+id/profileEmail"
                     android:text="miguelMark3@hotmail.com"
                     android:textSize="15sp"
                     android:paddingStart="20sp"
@@ -101,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/profileDescription"
                     android:layout_marginBottom="20sp"
                     android:paddingStart="20sp"
                     android:paddingEnd="20sp"
