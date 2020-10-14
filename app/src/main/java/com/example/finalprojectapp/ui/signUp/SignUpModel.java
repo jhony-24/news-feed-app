@@ -19,7 +19,7 @@ public class SignUpModel implements SignUpAdapter.Model {
             }
             @Override
             public void failed(){
-                SignUpModel.this.signUpPresenter.onSignUpCancel();
+                SignUpModel.this.signUpPresenter.onSignUpFailed();
             }
         });
     }

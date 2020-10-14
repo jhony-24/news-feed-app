@@ -32,7 +32,7 @@
             <com.google.android.material.textview.MaterialTextView
                 style="@style/CustomTextViewBigTitle"
                 android:textStyle="bold"
-                android:text="@string/login_landing_title" />
+                android:text="Bienvenido, acceso a la aplicación" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"

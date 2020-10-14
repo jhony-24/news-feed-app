@@ -17,9 +17,11 @@ public class SignUpRepository implements ManagementAccessPort.SignUp {
     @Override
     public void signUp(User user, ManagementAccessPort.StatusAccess statusAccess) {
         SignUpRepository self = this;
-        self.auth.createUserWithEmailAndPassword(user.email,user.password).addOnCompleteListener(taskAuth -> {
+        System.out.println("clicked");
+        self.auth.createUserWithEmailAndPassword(user.getEmail(),user.getPassword()).addOnCompleteListener(taskAuth -> {
             if(taskAuth.isSuccessful()) {
-                self.store.collection("users").add(self.newUser(user)).addOnCompleteListener(taskCollection -> {
+                String newUserId = taskAuth.getResult().getUser().getUid();
+                self.store.collection("users").add(self.newUser(user, newUserId)).addOnCompleteListener(taskCollection -> {
                     statusAccess.success(user);
                 });
             }
@@ -29,11 +31,12 @@ public class SignUpRepository implements ManagementAccessPort.SignUp {
         });
     }
 
-    private Map<String,Object> newUser(User user) {
+    private Map<String,Object> newUser(User user,String userId) {
         Map<String,Object> newMapUser = new HashMap<String,Object>();
-        newMapUser.put("email", user.email);
-        newMapUser.put("fullName", user.fullName);
-        newMapUser.put("description",user.description);
+        newMapUser.put("id",userId);
+        newMapUser.put("email", user.getEmail());
+        newMapUser.put("fullName", user.getFullName());
+        newMapUser.put("avatar", user.getAvatar());
         return newMapUser;
     }
 }

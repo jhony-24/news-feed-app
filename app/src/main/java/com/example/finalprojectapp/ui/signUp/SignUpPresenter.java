@@ -1,21 +1,24 @@
 package com.example.finalprojectapp.ui.signUp;
-
 import com.example.finalprojectapp.data.entities.User;
 import com.example.finalprojectapp.data.repositories.SignUpRepository;
 
 public class SignUpPresenter implements  SignUpAdapter.Presenter {
-
     SignUpAdapter.View signUpView;
     SignUpAdapter.Model signUpModel;
-
     public SignUpPresenter(SignUpAdapter.View signUpView){
         this.signUpView = signUpView;
         this.signUpModel = new SignUpModel(this,new SignUpRepository());
     }
 
     @Override
-    public void onSignUpAction(User user) {
-        this.signUpModel.onSignUp(user);
+    public void onSignUpAction(User user, User userVerify) {
+        this.signUpView.loading();
+        if(user.getPassword().equals(userVerify.getPassword())) {
+            this.signUpModel.onSignUp(user);
+        }
+        else {
+            this.signUpView.failedMessage();
+        }
     }
 
     @Override
@@ -30,6 +33,6 @@ public class SignUpPresenter implements  SignUpAdapter.Presenter {
 
     @Override
     public void onSignUpFailed() {
-        this.signUpView.success();
+        this.signUpView.failedMessage();
     }
 }

@@ -65,7 +65,7 @@
                 app:boxCornerRadiusTopEnd="10sp"
                 style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginEditTextFullName"
+                    android:id="@+id/signUpEditTextFullName"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -79,7 +79,7 @@
                 app:boxCornerRadiusTopEnd="10sp"
                 style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginEditTextEmail"
+                    android:id="@+id/signUpEditTextEmail"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -93,7 +93,7 @@
                 app:boxCornerRadiusTopEnd="10sp"
                 style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginEditTextPassword"
+                    android:id="@+id/signUpEditTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -108,7 +108,7 @@
                 app:boxCornerRadiusTopEnd="10sp"
                 style="@style/CustomLoginEditTextOutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginEditTextPasswordConfirm"
+                    android:id="@+id/signUpEditTextPasswordVerify"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -122,11 +122,6 @@
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:layout_height="wrap_content">
-            <ProgressBar
-                android:visibility="gone"
-                android:id="@+id/signInProgressBarCreate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
             <com.google.android.material.button.MaterialButton
                 app:cornerRadius="30sp"
                 android:id="@+id/signUpButtonCreate"
@@ -150,4 +145,15 @@
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
+    <RelativeLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="#99000000"
+        android:id="@+id/signInProgressBarCreate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 </RelativeLayout>

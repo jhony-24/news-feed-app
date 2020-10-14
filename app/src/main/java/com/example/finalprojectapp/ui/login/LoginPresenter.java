@@ -18,8 +18,8 @@ public class LoginPresenter implements  LoginAdapter.Presenter {
         else {
             this.loginView.loading();
             User user = new User();
-            user.email = email;
-            user.password = password;
+            user.setEmail(email);
+            user.setPassword(password);
             this.loginModel.onSignIn(user);
         }
     }

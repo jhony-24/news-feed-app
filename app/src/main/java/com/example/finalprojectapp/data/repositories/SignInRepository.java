@@ -12,12 +12,12 @@ public class SignInRepository implements ManagementAccessPort.SignIn {
     }
     @Override
     public void signIn(User user, ManagementAccessPort.StatusAccess statusAccess) {
-        this.auth.signInWithEmailAndPassword(user.email,user.password).addOnCompleteListener((task)->{
+        this.auth.signInWithEmailAndPassword(user.getEmail(),user.getPassword()).addOnCompleteListener((task)->{
             if (task.isSuccessful()) {
                 FirebaseUser firebaseUser = task.getResult().getUser();
                 User userModel = new User();
-                userModel.email = firebaseUser.getEmail();
-                userModel.token = firebaseUser.getUid();
+                userModel.setEmail(firebaseUser.getEmail());
+                userModel.setToken(firebaseUser.getUid());
                 statusAccess.success(userModel);
             }
             else {

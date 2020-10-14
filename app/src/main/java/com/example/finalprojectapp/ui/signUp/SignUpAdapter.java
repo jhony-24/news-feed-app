@@ -6,12 +6,13 @@ import com.example.finalprojectapp.common.interfaces.StatusAction;
 public interface SignUpAdapter {
     interface View extends StatusAction.ActionLoadingAndSuccess {
         void cancelSignUp();
+        void failedMessage();
     }
     interface Model {
         void onSignUp(User user);
     }
     interface Presenter {
-        void onSignUpAction(User user);
+        void onSignUpAction(User user, User userVerify );
         void onSignUpCancel();
         void onSignUpComplete();
         void onSignUpFailed();
