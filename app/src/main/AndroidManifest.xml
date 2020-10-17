@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreatePostActivity"></activity>
+        <activity android:name=".ui.toPost.CreatePostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".ui.settings.SettingsActivity" />
         <activity android:name=".ui.news.NewsActivity" />
         <activity
