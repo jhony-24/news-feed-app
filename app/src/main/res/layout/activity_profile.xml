@@ -72,14 +72,14 @@
                 </FrameLayout>
                 <TextView
                     android:id="@+id/profileFullName"
-                    android:text="User number one"
+                    android:text="loading..."
                     style="@style/CustomTextViewBigTitle"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:id="@+id/profileEmail"
-                    android:text="miguelMark3@hotmail.com"
+                    android:text=""
                     android:textSize="15sp"
                     android:paddingStart="20sp"
                     android:paddingEnd="20sp"

@@ -21,7 +21,8 @@ public class LoginModel implements LoginAdapter.Model{
                 LoginModel.this.loginPresenter.onSignComplete(successUser);
             }
             @Override
-            public void failed() {
+            public void failed()
+            {
                 LoginModel.this.loginPresenter.onSignFailed();
             }
         });

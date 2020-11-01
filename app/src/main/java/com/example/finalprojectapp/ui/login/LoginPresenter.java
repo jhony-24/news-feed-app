@@ -36,7 +36,8 @@ public class LoginPresenter implements  LoginAdapter.Presenter {
     public void onSignComplete(User user) {
         PersistKeyValue[] persistKeyValues = new PersistKeyValue[]{
                 new PersistKeyValue("id",user.getId()),
-                new PersistKeyValue("email",user.getEmail())
+                new PersistKeyValue("email",user.getEmail()),
+                new PersistKeyValue("fullName",user.getFullName())
         };
         PersistUserAccountRepository repository = new PersistUserAccountRepository(this.activity);
         repository.persist(persistKeyValues);

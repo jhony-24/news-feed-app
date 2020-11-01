@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.common.helpers.NavigateScreen;
 import com.example.finalprojectapp.common.listViews.ListViewNewsFeedPublished;
 import com.example.finalprojectapp.data.entities.NewPost;
 import com.example.finalprojectapp.data.entities.NewsFeedPublished;
@@ -22,6 +23,7 @@ import com.example.finalprojectapp.ui.profile.ProfileActivity;
 import com.example.finalprojectapp.ui.settings.SettingsActivity;
 import com.example.finalprojectapp.common.helpers.ComposeAnimations;
 import com.example.finalprojectapp.common.helpers.BottomNavigateActionController;
+import com.example.finalprojectapp.ui.toPost.CreatePostActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -74,7 +76,7 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
         this.onLoadNewsFeed();
 
         this.newsImageButtonAddNewPost.setOnClickListener(event -> {
-
+                new NavigateScreen().navigate(this, CreatePostActivity.class);
         });
     }
 

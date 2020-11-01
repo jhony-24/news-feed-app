@@ -41,45 +41,54 @@
                 android:contentDescription="user" />
         </TableRow>
     </TableLayout>
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0sp"
-        android:layout_weight="1"
-        android:layout_marginStart="10sp"
-        android:layout_marginEnd="10sp"
-        >
-        <TextView
-            android:textStyle="bold"
-            android:layout_marginTop="20sp"
-            android:layout_marginBottom="30sp"
-            android:textAlignment="textStart"
-            style="@style/CustomTextViewBigTitle"
-            android:paddingEnd="50sp"
-            android:text="Hola, realiza una nueva publicación para compartir"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/createPostMessage"
-            android:gravity="top"
-            android:background="@drawable/card_rounded_solid"
-            android:inputType="text|textMultiLine"
-            android:padding="30sp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Escribir nuevo texto..."
-            android:layout_marginBottom="50sp"/>
-    </LinearLayout>
-    <Button
-        android:enabled="false"
-        android:id="@+id/createPostButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10sp"
-        android:padding="15sp"
-        android:text="Publicar"
-        android:background="@drawable/gradient_primary_rounded"
-        android:layout_marginTop="10sp"
-        android:layout_marginBottom="10sp"
-        android:layout_marginEnd="10sp"/>
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="1"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                >
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="30sp"
+                    android:textAlignment="textStart"
+                    style="@style/CustomTextViewBigTitle"
+                    android:paddingEnd="50sp"
+                    android:text="Hola, realiza una nueva publicación para compartir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/createPostMessage"
+                    android:gravity="top"
+                    android:background="@drawable/card_rounded_solid"
+                    android:inputType="text|textMultiLine"
+                    android:padding="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Escribir nuevo texto..."
+                    android:layout_marginBottom="50sp"/>
+            </LinearLayout>
+            <Button
+                android:enabled="false"
+                android:id="@+id/createPostButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:padding="15sp"
+                android:text="Publicar"
+                android:background="@drawable/gradient_primary_rounded"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginEnd="10sp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
