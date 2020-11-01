@@ -16,9 +16,9 @@ public class GetProfileDataRepository implements LoadUserPort {
             if(error == null && value != null) {
                 DocumentSnapshot queryDocumentSnapshot = value.getDocuments().get(0);
                 User userInformation = new User();
-                userInformation.setAvatar(queryDocumentSnapshot.get("avatar").toString());
-                userInformation.setFullName(queryDocumentSnapshot.get("fullName").toString());
-                userInformation.setEmail(queryDocumentSnapshot.get("email").toString());
+                userInformation.setAvatar(String.valueOf(queryDocumentSnapshot.get("avatar")));
+                userInformation.setFullName(String.valueOf(queryDocumentSnapshot.get("fullName")));
+                userInformation.setEmail(String.valueOf(queryDocumentSnapshot.get("email")));
                 userDataId.getUserId(userInformation);
             }
         });
