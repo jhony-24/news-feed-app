@@ -8,6 +8,7 @@ import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
+import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.common.helpers.NavigateScreen;
@@ -54,5 +55,15 @@ public class CreatePostActivity extends AppCompatActivity implements  CreatePost
 
     public void onNavigateToProfileFromCreatePost(View view){
         new NavigateScreen().navigate(this,ProfileActivity.class);
+    }
+
+    @Override
+    public void loading() {
+
+    }
+
+    @Override
+    public void success() {
+        Toast.makeText(this,"Publicación completada",Toast.LENGTH_SHORT).show();
     }
 }

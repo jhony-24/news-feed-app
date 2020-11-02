@@ -13,6 +13,7 @@ public class NewsPresenter implements NewsAdapter.Presenter{
     public  NewsPresenter(NewsAdapter.View newsView ) {
         this.newsView = newsView;
         this.newsModel = new NewsModel(this,new PublishNewsRepository(), new GetNewsFeedRepository());
+        this.newsModel.onLoadNewsFeed();
     }
 
     @Override

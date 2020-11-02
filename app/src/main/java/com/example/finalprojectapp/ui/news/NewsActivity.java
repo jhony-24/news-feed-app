@@ -41,12 +41,14 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
     private LinearLayout newsLinearLayoutContainerSearchNews;
     private TextView newsTextViewCancelSearchNews;
     private RelativeLayout newsProgressBarContainerAllData;
+    private  NewsAdapter.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
+        this.presenter = new NewsPresenter(this);
         this.editTextNewMessagePost = (EditText) findViewById(R.id.editTextNewMessagePost);
         this.listViewNewsFeed = (ListView)findViewById(R.id.listViewNewsFeed);
         this.newsImageButtonSearch = (ImageButton)findViewById(R.id.newsImageButtonSearch);
@@ -73,8 +75,6 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
             return false;
         });
         this.controlAppearanceContainerSearchNewsFeed();
-        this.onLoadNewsFeed();
-
         this.newsImageButtonAddNewPost.setOnClickListener(event -> {
                 new NavigateScreen().navigate(this, CreatePostActivity.class);
         });
@@ -103,23 +103,9 @@ public class NewsActivity extends AppCompatActivity implements  NewsAdapter.View
 
     @Override
     public void onLoadNewsFeed(ArrayList<NewPost> listNewPost) {
-
+        ListViewNewsFeedPublished listViewNewsFeedPublishedAdapter = new ListViewNewsFeedPublished(getApplicationContext(), listNewPost);
+        NewsActivity.this.listViewNewsFeed.setAdapter(listViewNewsFeedPublishedAdapter);
+        NewsActivity.this.newsProgressBarContainerAllData.setVisibility(View.GONE);
     }
 
-    public void onLoadNewsFeed(){
-
-        APIGetNewsFeedRepository.load(new APIGetNewsFeedRepository.LoadDataCallback() {
-            @Override
-            public void load(ArrayList<NewsFeedPublished> newsFeedPublished) {
-                ListViewNewsFeedPublished listViewNewsFeedPublishedAdapter = new ListViewNewsFeedPublished(getApplicationContext(), newsFeedPublished);
-                NewsActivity.this.listViewNewsFeed.setAdapter(listViewNewsFeedPublishedAdapter);
-                NewsActivity.this.newsProgressBarContainerAllData.setVisibility(View.GONE);
-            }
-            @Override
-            public void failed() {
-                Toast.makeText(getApplicationContext(),"Error network",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
 }
